@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function getTask() {
+            //var addButton = document.getElementById("addButton");
+            var task = document.getElementById("taskInput").Value;
+            alert(task);
+          }
+        </script>
+</head>
+<body>
+    <h1> To Do List</h1>
+    <p1> Add a task</p1>
+    <br>
+    <br>
+       <form>  
+           <input type="text" name="taskInput" maxlength="100" id="taskInput">
+           <input type="submit" value="Add" id="addButton" onclick="getTask()"/>
+        </form>
+        
+   </body>
+</html>
