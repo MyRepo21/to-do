@@ -1,21 +1,29 @@
+<!-- 
+<script type = "text/javascript" src="function.js"></script>
+
+<p1 id = "task"></p1>
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>To Do</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-   
 </head>
-    <body>
-     <h1> To Do List</h1>
-     <p1> Add a task</p1>
-     <br>
-     <br>
-        <form>
-            <input type="text" name="taskInput" maxlength="100" id="taskInput">
-            <input type="submit" value="Add" id="addButton" />
-            <ul id = "taskList"></ul>
-        </form>
-        <script src="to-do.js"></script>
-    </body>
+<body>
+    <h1> To Do List</h1>
+    <p1> Add a task</p1>
+    <br>
+    <br>
+       <div>  
+            <input type="text" name="taskInput" name = "taskInput" id="taskInput">
+            <input type="submit" value="Add" id="addButton" name = "addButton">
+        </div>
+        <div>
+            <ul id="taskList"></ul>
+        </div>
+        <script src="to-do.js">
+        </script>  
+   </body>
 </html>
