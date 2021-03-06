@@ -24,21 +24,8 @@ function getTask(e) {
     var task = document.getElementById("task").value; //get task from user
     var taskList = document.createElement("li");
     taskList.appendChild(task);
-    <input type="image" src="ito-do-app/images/imgDeleteButton.PNG" alt="Submit" width="416" height="16"> 
-  }
+   }
 
-  function createDoneButton() {  
-    const doneButton = document.createElement("button");
-    doneButton.innerHTML="Done";
-    document.taskList.appendChild(doneButton);  
-  }
-
-  function createDeleteButton() {  
-    const deleteButton = document.createElement("button");
-    deleteButton.innerHTML="Delete";
-    document.taskList.appendChild(deleteButton);
-  }
-  
   function markTaskDone() {
     const doneButton = document.getElementById("doneButton");
     const taskList = document.createElement("taskList");//style list element task with strikethrough
@@ -51,9 +38,8 @@ function getTask(e) {
   }
  
   addButton.addEventListener("click", getTask);
-  createDoneButton();
-  createDeleteButton();
   doneButton.addEventListener("click", markTaskDone);
+  deleteButton.addEventListener("click", deleteTask);
 
   
   
