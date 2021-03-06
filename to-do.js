@@ -13,30 +13,41 @@ get task (on button click) getElementByID
 mark task complete
 */
 
-
-const addButton = document.querySelector("#addButton");
+/* 
+function getTask(e) {
+    e.preventDefault();
+    addButton.addEventListener("click", getTaskSubFcn()) {
+      getTaskSubFcn {}
+    };
+    */
 
 
 function getTask(e) {
-
     e.preventDefault();
+         if (task = " ") {
+         alert("Please enter a task.");
+       }
 
-    var task = document.getElementById("task").value; //get task from user
-    var taskList = document.createElement("li");
-    taskList.appendChild(task);
+    let taskList = document.createElement("li");
+    let taskListItem = taskList.appendChild(task).innerHTML;
+    document.getElementById("task").value = "";
    }
 
   function markTaskDone() {
-    const doneButton = document.getElementById("doneButton");
-    const taskList = document.createElement("taskList");//style list element task with strikethrough
+       let task.style.textDecoration = "line-through";
+
   }
 
   function deleteTask() {
-    const deleteButton = document.getElementById("deleteButton");
-    deleteButton.addEventListener("click", deleteTask);
     taskList.removeChild("task");
   }
- 
+
+  let task = document.getElementById("task").value; 
+  const taskList = document.createElement("taskList");
+  const addButton = document.getElementByID("addButton");
+  const doneButton = document.getElementByID("doneButton");
+  const deleteButton = document.getElementByID("deleteButton");
+
   addButton.addEventListener("click", getTask);
   doneButton.addEventListener("click", markTaskDone);
   deleteButton.addEventListener("click", deleteTask);
