@@ -1,30 +1,24 @@
-function getTask(e) {
-     e.preventDefault();
-   var task = document.getElementById("taskInput");
-   /*if (task = " ") {
-   alert("Please enter a task.");
-  }*/
-  var taskList = document.getElementById("taskList");
-  
-  taskList.append(task.value);
-  task.value = "";
-}
-
-  function markTaskDone() {
-  task.style.textDecoration = "line-through";
-
-  }
-
-  function deleteTask() {
-    taskList.removeChild("task");
-  }
-
-  const taskList = document.createElement("taskList");
+  const addButton = document.querySelector("#addButton");
   const doneButton = document.getElementById("doneButton");
   const deleteButton = document.getElementById("deleteButton");
-  const addButton = document.querySelector("#addButton");
+  var taskInput = document.getElementById("taskInput");
+   
+    addButton.addEventListener("click", () => {
+    var taskInput = document.getElementById("taskInput");
+    var taskInputString = taskInput.value;
+    var taskList = document.getElementById("taskList");
+    var taskListItem = document.createElement("li");
+    
+    taskListItem.append(taskInputString);
+    taskList.append(taskListItem);
+    taskInputString = "";
+  });
+  
+  //doneButton.addEventListener("click", () => {
+    //taskListItem.style.textDecoration = "line-through";
+  //});
 
-
-  addButton.addEventListener("click", getTask);
-  //doneButton.addEventListener("click", markTaskDone);
- // deleteButton.addEventListener("click", deleteTask);
+ // deleteButton.addEventListener("click", () => {
+    //taskList.removeChild("task");
+ // });
+ 
